@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Inter as FontSans } from "next/font/google";
@@ -15,6 +16,18 @@ const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans"
 });
+
+export const metadata: Metadata = {
+  title: "Connect Four",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false
+    }
+  }
+};
 
 export default function RootLayout({
   children
